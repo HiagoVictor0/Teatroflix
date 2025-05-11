@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Teatroflix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Teatroflix">
+    </div>
+    <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<section class="formulario">
+    <h2>Crie sua Conta</h2>
+
+    <form action="login.html" method="POST">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <label for="confirmar-senha">Confirmar Senha</label>
+        <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+
+        <button type="submit" class="botao-formulario">Cadastrar</button>
+    </form>
+
+    <p>Já possui uma conta? <a href="login.html">Faça login</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Teatroflix - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

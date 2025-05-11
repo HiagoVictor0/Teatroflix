@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - Teatroflix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Teatroflix">
+    </div>
+    <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="cadastro.html">Cadastro</a>
+    </nav>
+</header>
+
+<section class="chat-container">
+    <h2>Atendimento ao Cliente</h2>
+
+    <div class="chat-box" id="chat-box">
+        <div class="mensagem-suporte">
+            Olá! 👋 Como podemos te ajudar hoje?
+        </div>
+    </div>
+
+    <form id="chat-form">
+        <input type="text" id="mensagem" placeholder="Digite sua mensagem..." required>
+        <button type="submit" class="botao-chat">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Teatroflix - Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    const chatForm = document.getElementById('chat-form');
+    const chatBox = document.getElementById('chat-box');
+
+    chatForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const mensagemInput = document.getElementById('mensagem');
+        const mensagemTexto = mensagemInput.value.trim();
+
+        if (mensagemTexto !== '') {
+            const novaMensagem = document.createElement('div');
+            novaMensagem.classList.add('mensagem-usuario');
+            novaMensagem.innerText = mensagemTexto;
+            chatBox.appendChild(novaMensagem);
+
+            // Resposta automática simulada
+            setTimeout(() => {
+                const resposta = document.createElement('div');
+                resposta.classList.add('mensagem-suporte');
+                resposta.innerText = "Obrigado pela sua mensagem! Em breve nossa equipe responderá.";
+                chatBox.appendChild(resposta);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 1000);
+
+            mensagemInput.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    });
+</script>
+
+</body>
+</html>

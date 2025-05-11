@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Ingressos - Teatroflix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Teatroflix">
+        </div>
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="#">Programação</a>
+            <a href="#">Ingressos</a>
+            <a href="#">Suporte</a>
+        </nav>
+    </header>
+
+    <section class="compra-ingresso">
+        <h2>Compra de Ingressos</h2>
+
+        <div class="evento-info">
+            <h3>Drama: "A Última Ceia"</h3>
+            <p><strong>Data:</strong> 20/05/2025 - 20h</p>
+            <p><strong>Local:</strong> Teatro Central - Sala Principal</p>
+        </div>
+
+        <div class="selecao-assentos">
+            <h3>Escolha seu Assento</h3>
+            <div class="mapa-assentos">
+                <!-- Assentos (exemplo) -->
+                <div class="assento disponivel">A1</div>
+                <div class="assento ocupado">A2</div>
+                <div class="assento disponivel">A3</div>
+                <div class="assento disponivel">A4</div>
+                <div class="assento ocupado">A5</div>
+                <div class="assento disponivel">B1</div>
+                <div class="assento disponivel">B2</div>
+                <div class="assento ocupado">B3</div>
+                <div class="assento disponivel">B4</div>
+                <div class="assento disponivel">B5</div>
+            </div>
+            <small>Clique em um assento disponível para selecionar</small>
+        </div>
+
+        <div class="pagamento">
+            <h3>Forma de Pagamento</h3>
+            <form action="confirmacao.html" method="POST">
+                <label>
+                    <input type="radio" name="pagamento" value="credito" required> Cartão de Crédito
+                </label><br>
+                <label>
+                    <input type="radio" name="pagamento" value="debito" required> Cartão de Débito
+                </label><br>
+                <label>
+                    <input type="radio" name="pagamento" value="pix" required> PIX
+                </label><br><br>
+
+                <button type="submit" class="botao-comprar">Finalizar Compra</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Teatroflix - Todos os direitos reservados. | Política de Privacidade</p>
+    </footer>
+
+    <script>
+        // Script simples para seleção de assentos
+        const assentos = document.querySelectorAll('.assento.disponivel');
+
+        assentos.forEach(assento => {
+            assento.addEventListener('click', () => {
+                assento.classList.toggle('selecionado');
+            });
+        });
+    </script>
+
+</body>
+</html>

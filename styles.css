@@ -1,0 +1,353 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #5c2d91; /* Roxo forte */
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    text-align: center;
+}
+
+.banner img {
+    width: 50%;
+    height: auto;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.banner-text .botao {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.banner-text .botao:hover {
+    background-color: #d32f2f;
+}
+
+/* Seções */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    flex: 1;
+
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #5c2d91;
+}
+
+/* Programação */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f1f1f1;
+    width: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.botao-comprar {
+    display: inline-block;
+    background-color: #5c2d91;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.botao-comprar:hover {
+    background-color: #4a2370;
+}
+
+/* Promoções */
+.promocoes .promo {
+    background-color: #ffe082;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Suporte */
+.suporte p a {
+    color: #f44336;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #5c2d91;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-text {
+        padding: 10px 20px;
+    }
+}
+
+/* Compra de Ingressos */
+.compra-ingresso {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.evento-info {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.selecao-assentos {
+    margin-bottom: 30px;
+}
+
+.mapa-assentos {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.assento {
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.assento.disponivel:hover {
+    background-color: #8bc34a;
+}
+
+.assento.ocupado {
+    background-color: #f44336;
+    cursor: not-allowed;
+}
+
+.assento.selecionado {
+    background-color: #5c2d91;
+    color: white;
+}
+
+.pagamento form {
+    margin-top: 20px;
+}
+
+.pagamento label {
+    font-size: 1rem;
+}
+
+.pagamento .botao-comprar {
+    margin-top: 20px;
+}
+
+/* Formulários de Cadastro e Login */
+.formulario {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulario input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.botao-formulario {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #5c2d91;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.botao-formulario:hover {
+    background-color: #482070;
+}
+
+.formulario p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Chat de Suporte */
+.chat-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.chat-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chat-box {
+    background: #fff;
+    border: 1px solid #ccc;
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.mensagem-usuario, .mensagem-suporte {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.mensagem-usuario {
+    background-color: #d1e7dd;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.mensagem-suporte {
+    background-color: #f8d7da;
+    align-self: flex-start;
+    margin-right: auto;
+}
+
+#chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+#mensagem {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.botao-chat {
+    padding: 10px 20px;
+    background-color: #5c2d91;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botao-chat:hover {
+    background-color: #482070;
+}
