@@ -363,3 +363,37 @@ footer {
 .botao-chat:hover {
     background-color: #482070;
 }
+
+.meus-ingressos {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.ingressos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.ingresso-card {
+    background-color: #f5f5f5;
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.botao-secundario {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #5c2d91;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
