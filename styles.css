@@ -6,12 +6,12 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
-    color: #333;
-    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f0f9; /* tom suave lilás claro */
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header */
@@ -25,6 +25,7 @@ header {
 
 .logo img {
     height: 50px;
+    color: white;
 }
 
 .menu a {
@@ -32,7 +33,6 @@ header {
     margin-left: 20px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
 }
 
 .menu a:hover {
@@ -43,11 +43,14 @@ header {
 .banner {
     position: relative;
     text-align: center;
+    color: white;
 }
 
 .banner img {
-    width: 50%;
-    height: auto;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    filter: brightness(70%);
 }
 
 .banner-text {
@@ -55,19 +58,15 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    background-color: rgba(0,0,0,0.5);
-    padding: 20px 40px;
-    border-radius: 10px;
 }
 
-.banner-text .botao {
-    background-color: #f44336;
+.botao {
+    padding: 5px 20px;
+    background-color: #e91e63;
     color: white;
-    padding: 10px 20px;
-    margin-top: 15px;
-    display: inline-block;
+    border: none;
     text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
 }
 
@@ -89,25 +88,35 @@ section h2 {
 }
 
 /* Programação */
+.programacao {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .card {
-    background-color: #f1f1f1;
-    width: 280px;
+    background-color: #f5f5f5;
+    width: 250px;
     border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
 }
+
 
 .card h3 {
     margin: 10px 0;
@@ -118,13 +127,12 @@ section h2 {
 }
 
 .botao-comprar {
-    display: inline-block;
     background-color: #5c2d91;
     color: white;
-    padding: 10px;
-    margin-bottom: 15px;
-    text-decoration: none;
+    padding: 10px 15px;
     border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .botao-comprar:hover {
@@ -132,10 +140,10 @@ section h2 {
 }
 
 /* Promoções */
-.promocoes .promo {
-    background-color: #ffe082;
-    padding: 20px;
-    border-radius: 10px;
+.promocoes {
+    background-color: #e6dbf6;
+    padding: 30px;
+    text-align: center;
 }
 
 /* Suporte */
@@ -144,14 +152,18 @@ section h2 {
     text-decoration: underline;
 }
 
+.suporte {
+    padding: 30px;
+    text-align: center;
+}
+
 /* Footer */
 footer {
     background-color: #5c2d91;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     margin-top: auto;
-    
 }
 
 /* Responsivo */
