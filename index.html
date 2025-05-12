@@ -12,12 +12,13 @@
         <div class="logo">
             <img src="" alt="Teatroflix">
         </div>
-        <nav class="menu">
+        <nav class="menu" id="menu">
+            <a href="index.html">Home</a>
             <a href="#programacao">Programação</a>
             <a href="meus-ingressos.html">Ingressos</a>
-            <a href="login.html">Cadastro/Login</a>
             <a href="suporte.html">Suporte</a>
         </nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div> 
     </header>
 
     <section class="banner">
@@ -60,6 +61,17 @@
         <p>Entre em contato conosco pelo <a href="suporte.html">Chat</a> ou envie um e-mail para <strong>suporte@teatroflix.com</strong>.</p>
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const menuToggle = document.getElementById("menu-toggle");
+          const menu = document.getElementById("menu");
+      
+          menuToggle.addEventListener("click", () => {
+            menu.classList.toggle("ativo");
+          });
+        });
+      </script>
+      
     <footer>
         <p>&copy; 2025 Teatroflix - Todos os direitos reservados. | Política de Privacidade</p>
     </footer>
