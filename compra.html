@@ -49,7 +49,7 @@
 
         <div class="pagamento">
             <h3>Forma de Pagamento</h3>
-            <form action="confirmacao.html" method="POST">
+            <form action="cartao.html" method="POST">
                 <label>
                     <input type="radio" name="pagamento" value="credito" required> Cartão de Crédito
                 </label><br>
@@ -79,6 +79,23 @@
             });
         });
     </script>
+
+<script>
+    document.getElementById("form-pagamento").addEventListener("submit", function(event) {
+        event.preventDefault(); // impede o envio padrão
+
+        const formaSelecionada = document.querySelector('input[name="pagamento"]:checked').value;
+
+        // redireciona de acordo com a escolha
+        if (formaSelecionada === "credito" || formaSelecionada === "debito") {
+            window.location.href = "cartao.html";
+        } else if (formaSelecionada === "pix") {
+            window.location.href = "pix.html";
+        } else {
+            alert("Selecione uma forma de pagamento.");
+        }
+    });
+</script>
 
 </body>
 </html>
