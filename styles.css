@@ -20,24 +20,37 @@ body {
 
 /* Header */
 header {
-    background-color: #5c2d91; /* Roxo forte */
-    padding: 15px 30px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    background-color: #5c2d91;
+    padding: 15px 20px;
+    color: white;
+    flex-wrap: wrap;
 }
 
 .logo img {
-    height: 50px;
-    color: white;
+    max-height: 50px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
 }
 
 .menu a {
     color: white;
-    margin-left: 20px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
 }
+
+/* Ícone hamburguer */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 
 .menu a:hover {
     text-decoration: underline;
@@ -45,9 +58,22 @@ header {
 
 /* Banner */
 .banner {
-    position: relative;
-    text-align: center;
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
     color: white;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
 .banner img {
@@ -62,13 +88,13 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #482070;
+    background-color: #48207050;
 }
 
 .botao {
     
     padding: 5px 20px;
-    background-color: #e91e63;
+    background-color: #e91e6280;
     color: white;
     border: none;
     text-decoration: none;
@@ -182,7 +208,29 @@ footer {
     .banner-text {
         padding: 10px 20px;
     }
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .menu.ativo {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
 }
+
 
 /* Compra de Ingressos */
 .compra-ingresso {
@@ -445,7 +493,7 @@ footer {
 .pagamento-form button {
     margin-top: 20px;
     padding: 12px;
-    background-color: #c62828;
+    background-color: #5c2d91;;
     color: white;
     font-size: 16px;
     border: none;
@@ -455,5 +503,5 @@ footer {
 }
 
 .pagamento-form button:hover {
-    background-color: #b71c1c;
+    background-color: #1a0b2b;
 }
